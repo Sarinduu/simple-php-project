@@ -1,4 +1,4 @@
-# Daily Attendance System
+# Simple Daily Attendance System
 
 This is a web-based **Daily Attendance Tracking System** built using PHP and MySQL. It allows users to log their attendance status throughout the day, including events like login, breaks, powercuts, and logout. Admins can view and filter attendance across all users.
 
