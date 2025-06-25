@@ -1,0 +1,91 @@
+.register-body {
+  background: url('../assets/images/backgroundImage.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-overlay {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 50px 40px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.register-heading {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.register-error {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.register-input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.register-input-group label {
+  color: #ffffff;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+.register-input-group input,
+.register-input-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: rgba(255,255,255,0.95);
+  font-size: 15px;
+}
+
+.register-button-group input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  width: 50%;
+  transition: background 0.5s ease;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.register-button-group input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.register-login-link {
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.register-login-link a {
+  color: #00bfff;
+  text-decoration: none;
+}

@@ -1,0 +1,122 @@
+/* Navbar wrapper */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.brand {
+  margin: 0;
+  font-size: 26px;
+  color: white;
+}
+
+/* Right menu */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Login & Register Buttons */
+.nav-right a {
+  background-color: #ffffff;
+  color: #004080;
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.nav-right a:hover {
+  background-color: #d1d1d1;
+}
+
+/* User menu */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-msg {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Dropdown */
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Role label */
+.dropdown-content .role-label {
+  font-weight: bold;
+  color: #004080;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* Show dropdown */
+.show {
+  display: block;
+}

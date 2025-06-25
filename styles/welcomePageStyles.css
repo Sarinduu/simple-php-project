@@ -1,0 +1,67 @@
+.welcome-body {
+  background: url('../assets/images/backgroundImage.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-overlay {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.welcome-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 50px 40px;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+.company-name {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.system-title {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 100px;
+  line-height: 1.5;
+}
+
+.login-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
