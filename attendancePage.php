@@ -80,10 +80,10 @@ $entries_by_date = getAllAttendanceEntriesGroupedByDate($conn, $user_id);
           </select>
 
           <label>Start Time:</label>
-          <input type="time" name="start_time_only" id="edit_start_time" required>
+          <input type="time" name="start_time" id="edit_start_time" required>
 
           <label>End Time (optional):</label>
-          <input type="time" name="end_time_only" id="edit_end_time" />
+          <input type="time" name="end_time" id="edit_end_time" />
 
           <button type="submit">Update</button>
         </form>
