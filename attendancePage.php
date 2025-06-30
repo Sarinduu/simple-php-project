@@ -16,7 +16,8 @@ $entries_by_date = getAllAttendanceEntriesGroupedByDate($conn, $user_id);
 
 <head>
   <meta charset="UTF-8">
-  <title>My Attendance</title>
+  <title>My Attendance | Daily Attendance System</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/attendancePageStyles.css">
 </head>

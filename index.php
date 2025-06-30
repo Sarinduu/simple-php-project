@@ -10,6 +10,7 @@ include 'components/navbar/navbar.php';
 <head>
   <meta charset="UTF-8">
   <title>Welcome | Daily Attendance System</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/welcomePageStyles.css">
 </head>

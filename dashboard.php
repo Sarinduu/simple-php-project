@@ -18,7 +18,8 @@ $groupedEntries = getFilteredAttendance($conn, $searchUsername, $attendanceStatu
 
 <head>
   <meta charset="UTF-8" />
-  <title>Admin Dashboard | Attendance System</title>
+  <title>Admin Dashboard | Daily Attendance System</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/dashboardPageStyles.css">
 </head>
