@@ -1,6 +1,6 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+  session_start();
 }
 ?>
 <!-- NAVBAR STYLES -->
@@ -21,16 +21,16 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="dropdown">
           <img src="assets/icons/user-icon.png" alt="User Icon" class="user-icon" onclick="toggleDropdown()" />
 
-            <div id="logoutDropdown" class="dropdown-content">
-                <?php if ($_SESSION['role'] === 'admin'): ?>
-                    <div class="role-label">Admin Account</div>
-                <?php elseif ($_SESSION['role'] === 'user'): ?>
-                    <div class="role-label">User Account</div>
-                <?php endif; ?>
-                <form action="logout.php" method="post">
-                    <button type="submit" class="logout-btn">Logout</button>
-                </form>
-            </div>
+          <div id="logoutDropdown" class="dropdown-content">
+            <?php if ($_SESSION['role'] === 'admin'): ?>
+              <div class="role-label">Admin Account</div>
+            <?php elseif ($_SESSION['role'] === 'user'): ?>
+              <div class="role-label">User Account</div>
+            <?php endif; ?>
+            <form action="logout.php" method="post">
+              <button type="submit" class="logout-btn">Logout</button>
+            </form>
+          </div>
         </div>
       </div>
     <?php else: ?>

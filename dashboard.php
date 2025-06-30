@@ -1,29 +1,31 @@
 <?php
-  require_once './includes/auth.php';
-  requireLogin();
-  requireRole('admin');
-  include 'components/navbar/navbar.php';
-  include './includes/db.php';
-  require_once 'attendance/attendance_functions.php';
+require_once './includes/auth.php';
+requireLogin();
+requireRole('admin');
+include 'components/navbar/navbar.php';
+include './includes/db.php';
+require_once 'attendance/attendance_functions.php';
 
-  $searchUsername = $_POST['username'] ?? '';
-  $attendanceStatusFilter = $_POST['status'] ?? '';
-  $filterDate = $_POST['entry_date'] ?? '';
+$searchUsername = $_POST['username'] ?? '';
+$attendanceStatusFilter = $_POST['status'] ?? '';
+$filterDate = $_POST['entry_date'] ?? '';
 
-  $groupedEntries = getFilteredAttendance($conn, $searchUsername, $attendanceStatusFilter, $filterDate);
+$groupedEntries = getFilteredAttendance($conn, $searchUsername, $attendanceStatusFilter, $filterDate);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Admin Dashboard | Attendance System</title>
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/dashboardPageStyles.css">
 </head>
+
 <body>
   <div class="search-table-container">
-   <h2 class="adminpage-title">Admin Dashboard</h2>
+    <h2 class="adminpage-title">Admin Dashboard</h2>
 
     <!-- Search and Filter Section -->
     <div class="search-filter-container">
@@ -33,11 +35,11 @@
         <select name="status">
           <option value="">All Status</option>
           <?php
-            $statuses = ['Login','Logout','Powercut','Idle','Ongoing','Break','Away','PC/Network Issues'];
-            foreach ($statuses as $s) {
-              $selected = $attendanceStatusFilter === $s ? 'selected' : '';
-              echo "<option value='$s' $selected>$s</option>";
-            }
+          $statuses = ['Login', 'Logout', 'Powercut', 'Idle', 'Ongoing', 'Break', 'Away', 'PC/Network Issues'];
+          foreach ($statuses as $s) {
+            $selected = $attendanceStatusFilter === $s ? 'selected' : '';
+            echo "<option value='$s' $selected>$s</option>";
+          }
           ?>
         </select>
 
@@ -82,4 +84,5 @@
     </div>
   </div>
 </body>
+
 </html>

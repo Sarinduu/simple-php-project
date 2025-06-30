@@ -1,5 +1,6 @@
 <?php
-function getTodayAttendanceEntries($conn, $user_id) {
+function getTodayAttendanceEntries($conn, $user_id)
+{
     $today = date('Y-m-d');
     $stmt = $conn->prepare("SELECT * FROM attendance_entries WHERE user_id = ? AND entry_date = ? ORDER BY start_time");
     $stmt->bind_param("is", $user_id, $today);
@@ -14,7 +15,8 @@ function getTodayAttendanceEntries($conn, $user_id) {
     return $entries;
 }
 
-function getAllAttendanceEntriesGroupedByDate($conn, $user_id) {
+function getAllAttendanceEntriesGroupedByDate($conn, $user_id)
+{
     $entries = [];
 
     $stmt = $conn->prepare("SELECT * FROM attendance_entries WHERE user_id = ? ORDER BY entry_date DESC, start_time ASC");
@@ -29,7 +31,8 @@ function getAllAttendanceEntriesGroupedByDate($conn, $user_id) {
     return $entries;
 }
 
-function getFilteredAttendance($conn, $username, $status, $date) {
+function getFilteredAttendance($conn, $username, $status, $date)
+{
     $sql = "SELECT ae.id, ae.user_id, u.username, ae.entry_type, ae.start_time, ae.end_time, ae.entry_date
             FROM attendance_entries ae
             JOIN users u ON ae.user_id = u.id
@@ -61,5 +64,3 @@ function getFilteredAttendance($conn, $username, $status, $date) {
 
     return $grouped;
 }
-
-?>

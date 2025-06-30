@@ -4,31 +4,33 @@ redirectIfLoggedIn();
 include 'components/navbar/navbar.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username']);
-    $password = $_POST['password'];
+  $username = trim($_POST['username']);
+  $password = $_POST['password'];
 
-    $role = loginUser($username, $password);
-    if ($role === 'admin') {
-        header("Location: dashboard.php");
-        exit;
-    } elseif ($role === 'user') {
-        header("Location: attendancePage.php");
-        exit;
-    } else {
-        $error = "Invalid username or password!";
-    }
+  $role = loginUser($username, $password);
+  if ($role === 'admin') {
+    header("Location: dashboard.php");
+    exit;
+  } elseif ($role === 'user') {
+    header("Location: attendancePage.php");
+    exit;
+  } else {
+    $error = "Invalid username or password!";
+  }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login | Attendance System</title>
   <link rel="stylesheet" href="styles/index.css">
-  <link rel="stylesheet" href="styles/loginPageStyles.css" /> 
+  <link rel="stylesheet" href="styles/loginPageStyles.css" />
 </head>
+
 <body class="login-body">
   <div class="login-overlay">
     <div class="login-box">
@@ -58,5 +60,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
   </div>
 </body>
-</html>
 
+</html>

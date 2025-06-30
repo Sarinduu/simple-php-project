@@ -6,7 +6,8 @@ if (session_status() === PHP_SESSION_NONE) {
 require_once 'db.php';
 
 // Log in a user
-function loginUser($username, $password) {
+function loginUser($username, $password)
+{
     global $conn;
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
@@ -29,7 +30,8 @@ function loginUser($username, $password) {
 }
 
 // Register a new user
-function registerUser($username, $password, $role) {
+function registerUser($username, $password, $role)
+{
     global $conn;
 
     $allowed_roles = ['admin', 'user'];
@@ -61,12 +63,14 @@ function registerUser($username, $password, $role) {
 }
 
 // Check if user is logged in.
-function isLoggedIn() {
+function isLoggedIn()
+{
     return isset($_SESSION['user']);
 }
 
 // If already logged in, redirect based on role
-function redirectIfLoggedIn() {
+function redirectIfLoggedIn()
+{
     if (isLoggedIn() && isset($_SESSION['role'])) {
         if ($_SESSION['role'] === 'admin') {
             header("Location: dashboard.php");
@@ -79,7 +83,8 @@ function redirectIfLoggedIn() {
 }
 
 // Redirects to login page if not logged in.
-function requireLogin() {
+function requireLogin()
+{
     if (!isLoggedIn()) {
         header("Location: login.php");
         exit();
@@ -87,7 +92,8 @@ function requireLogin() {
 }
 
 // Blocks access if role doesn't match.
-function requireRole($requiredRole) {
+function requireRole($requiredRole)
+{
     if (!isset($_SESSION['role']) || $_SESSION['role'] !== $requiredRole) {
         echo "<h2 style='color:red;'>Access Denied: Insufficient Permissions</h2>";
         exit();
@@ -95,7 +101,8 @@ function requireRole($requiredRole) {
 }
 
 // Log out the user and destroy the session.
-function logoutUser() {
+function logoutUser()
+{
     session_unset();
     session_destroy();
     header("Location: login.php");

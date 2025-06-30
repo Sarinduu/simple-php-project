@@ -37,4 +37,3 @@ if ($del->execute()) {
 } else {
     echo "Failed to delete entry.";
 }
-?>

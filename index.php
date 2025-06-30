@@ -6,12 +6,14 @@ include 'components/navbar/navbar.php';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Welcome | Daily Attendance System</title>
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/welcomePageStyles.css">
 </head>
+
 <body class="welcome-body">
   <div class="welcome-overlay">
     <div class="welcome-box">
@@ -20,10 +22,10 @@ include 'components/navbar/navbar.php';
         <h1 class="company-name">Innodata</h1>
       </div>
       <h2 class="system-title">Daily Attendance Management System</h2>
-      
+
       <p class="intro-text">
         Welcome to our secure attendance management portal for Innodata employees.
-        <br/>
+        <br />
         Please log in to mark your attendance or manage.
       </p>
 
@@ -31,4 +33,5 @@ include 'components/navbar/navbar.php';
     </div>
   </div>
 </body>
+
 </html>

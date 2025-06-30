@@ -9,6 +9,7 @@ function handleStatusChange() {
 }
 
 const modal = document.getElementById("addModal");
+const modal2 = document.getElementById("editModal");
 const form = document.getElementById("attendanceForm");
 
 function closeModal() {
@@ -23,4 +24,25 @@ window.onclick = function (event) {
   }
 };
 
+function closeModal2() {
+  modal2.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target === modal2) {
+    closeModal2();
+  }
+};
+
 document.querySelector(".close-btn").addEventListener("click", closeModal);
+
+function openEditModal(id, type, startTime, endTime) {
+  const extractTime = (dt) =>
+    dt ? new Date(dt).toTimeString().slice(0, 5) : "";
+
+  document.getElementById("edit_entry_id").value = id;
+  document.getElementById("edit_entry_type").value = type;
+  document.getElementById("edit_start_time").value = extractTime(startTime);
+  document.getElementById("edit_end_time").value = extractTime(endTime);
+  document.getElementById("editModal").style.display = "flex";
+}
